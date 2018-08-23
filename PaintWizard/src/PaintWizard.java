@@ -1,6 +1,8 @@
 
 public class PaintWizard {
-//	public double[][] prices = {{19.99,20,10},{11.99,15,11},{25,10,20}};
+//	public double[][] prices = {{19.99,20,10},
+							  //{11.99,15,11},
+							  //{25,10,20}};
 //	public String[] names = {"CheepoMax","AverageJoes","DuluxourousPaints"};
 	
 	public String getCheepest(double[][] prices, String[] names, int roomSize)	{
