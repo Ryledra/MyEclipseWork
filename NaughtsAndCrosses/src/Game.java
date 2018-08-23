@@ -49,7 +49,7 @@ public class Game {
 
 		while (!game.valid_go(x, y, player)) {
 			System.out.println(y + 1 + ", " + x + 1 + " is not a valid move");
-			System.out.println("Player " + player + " enter your go:[x y]");
+			System.out.print("Player " + player + " enter your go:[x y]");
 			in = scan.nextLine();
 
 			parts = in.split(",");
@@ -57,6 +57,5 @@ public class Game {
 			x = Integer.getInteger(parts[0]) - 1;
 			y = Integer.getInteger(parts[1]) - 1;
 		}
-		scan.close();
 	}
 }
