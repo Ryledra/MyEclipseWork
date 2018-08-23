@@ -11,8 +11,8 @@ public class GoldilocksObjects {
 	public int temperature;
 	public int luminosity = 70;
 	
-	public GoldilocksObjects()	{
-		File file = new File("C:\\Users\\Admin\\Desktop\\EclipseWorkspace\\Goldilocks\\src\\goldilocks3.txt");
+	public GoldilocksObjects(String filePath)	{
+		File file = new File(filePath);
 		FileReader fr = null;
 		
 		try {

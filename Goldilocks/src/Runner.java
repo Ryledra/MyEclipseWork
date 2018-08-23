@@ -4,7 +4,7 @@ public class Runner {
 	public static void main(String[] args) {
 		//Goldilocks blonde = new Goldilocks();
 		//GoldilocksLuminosity blonde = new GoldilocksLuminosity();
-		GoldilocksObjects blonde = new GoldilocksObjects();
+		GoldilocksObjects blonde = new GoldilocksObjects("C:\\\\Users\\\\Admin\\\\Desktop\\\\EclipseWorkspace\\\\Goldilocks\\\\src\\\\goldilocks3.txt");
 		// System.out.println(blonde.weight);
 		
 //		for (int[] i : blonde.inArray)	{
