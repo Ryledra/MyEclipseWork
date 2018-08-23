@@ -9,9 +9,10 @@ public class GoldilocksObjects {
 	public ArrayList<Space> inArray = new ArrayList<>();
 	public int weight;
 	public int temperature;
+	public int luminosity = 70;
 	
 	public GoldilocksObjects()	{
-		File file = new File("C:\\Users\\Admin\\Desktop\\Eclipse Workspace\\Goldilocks\\src\\goldilocks3.txt");
+		File file = new File("C:\\Users\\Admin\\Desktop\\EclipseWorkspace\\Goldilocks\\src\\goldilocks3.txt");
 		FileReader fr = null;
 		
 		try {
@@ -48,14 +49,14 @@ public class GoldilocksObjects {
 	}
 	
 	public Boolean valid(Space space)	{
-		if (this.weight < capTemp[0] && this.temperature > capTemp[1] && this.luminosity < capTemp[2]) return true;
+		if (this.weight < space.getChairCap() && this.temperature > space.getPorridgeTemp() && this.luminosity < space.getLuminosity()) return true;
 		return false;
 	}
 	
 	public String willSit()	{
 		String output = "";
 		int count = 1;
-		for (int[] i : this.inArray)	{
+		for (Space i : this.inArray)	{
 			if (valid(i)) output += (count + " ");
 			count++;
 		}

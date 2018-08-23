@@ -11,7 +11,7 @@ public class Goldilocks {
 	public int temperature;
 	
 	public Goldilocks()	{
-		File file = new File("C:\\Users\\Admin\\Desktop\\Eclipse Workspace\\Goldilocks\\src\\goldilocks1.txt");
+		File file = new File("C:\\Users\\Admin\\Desktop\\EclipseWorkspace\\Goldilocks\\src\\goldilocks1.txt");
 		FileReader fr = null;
 		
 		try {

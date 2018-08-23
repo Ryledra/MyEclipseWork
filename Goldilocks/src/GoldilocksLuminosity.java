@@ -12,7 +12,7 @@ public class GoldilocksLuminosity {
 	public int luminosity = 70;
 	
 	public GoldilocksLuminosity()	{
-		File file = new File("C:\\Users\\Admin\\Desktop\\Eclipse Workspace\\Goldilocks\\src\\goldilocks3.txt");
+		File file = new File("C:\\Users\\Admin\\Desktop\\EclipseWorkspace\\Goldilocks\\src\\goldilocks3.txt");
 		FileReader fr = null;
 		
 		try {
