@@ -4,8 +4,7 @@ public class Runner {
 		Garage garage = new Garage("C:\\Users\\Admin\\Desktop\\EclipseWorkspace\\Garage\\src\\garage.txt");
 		
 		for (Vehicle i : garage.garage)	{
-			if (i instanceof Car)	System.out.println((Car)i);
-			else if (i instanceof Motorcycle)	System.out.println((Motorcycle)i);
+			System.out.println(i);
 		}
 		
 		System.out.println();
@@ -15,8 +14,7 @@ public class Runner {
 		garage.empty();
 		
 		for (Vehicle i : garage.garage)	{
-			if (i instanceof Car)	System.out.println((Car)i);
-			else if (i instanceof Motorcycle)	System.out.println((Motorcycle)i);
+			System.out.println(i);
 		}
 	}
 }
