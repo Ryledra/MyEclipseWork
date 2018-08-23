@@ -3,8 +3,8 @@ public class Runner {
 
 	public static void main(String[] args) {
 		//Goldilocks blonde = new Goldilocks();
-		GoldilocksLuminosity blonde = new GoldilocksLuminosity();
-		
+		//GoldilocksLuminosity blonde = new GoldilocksLuminosity();
+		GoldilocksObjects blonde = new GoldilocksObjects();
 		// System.out.println(blonde.weight);
 		
 //		for (int[] i : blonde.inArray)	{

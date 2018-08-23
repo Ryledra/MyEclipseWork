@@ -55,10 +55,8 @@ public class GoldilocksObjects {
 	
 	public String willSit()	{
 		String output = "";
-		int count = 1;
 		for (Space i : this.inArray)	{
-			if (valid(i)) output += (count + " ");
-			count++;
+			if (valid(i)) output += (i.getSpaceNo() + " ");
 		}
 		return output;
 	}
