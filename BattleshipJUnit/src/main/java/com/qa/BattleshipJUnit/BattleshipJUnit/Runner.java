@@ -1,3 +1,4 @@
+package com.qa.BattleshipJUnit.BattleshipJUnit;
 
 public class Runner {
 	

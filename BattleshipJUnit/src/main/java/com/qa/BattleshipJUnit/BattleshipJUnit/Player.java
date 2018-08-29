@@ -1,3 +1,4 @@
+package com.qa.BattleshipJUnit.BattleshipJUnit;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,9 +12,8 @@ public class Player {
 		grid = new Grid(gridSize);
 	}
 	
-	public boolean placeShips() {
+	public boolean placeShips(String[] ships) {
 		
-		String[] ships = {"2,patrol1","2,patrol2","3,battleship1","3,battleship2","3,submarine","4,destroyer","5,carrier"}; //{ship length, shipID}
 		String input = "";
 		
 		for (String i : ships)	{
@@ -39,6 +39,10 @@ public class Player {
 					else if(partsInput[1].equals("right")) pos[1] = (pos[1] + Integer.valueOf(partsInput[2])) % grid.gridSize;
 					else if(partsInput[1].equals("up")) pos[0] = ((((pos[0] - Integer.valueOf(partsInput[2])) % grid.gridSize) + grid.gridSize) % grid.gridSize);
 					else if(partsInput[1].equals("down")) pos[0] = (pos[0] + Integer.valueOf(partsInput[2])) % grid.gridSize;
+				}
+				if (partsInput[0].equals("quit")) {
+					scan.close();
+					return false;
 				}
 			} while (!partsInput[0].equals("set"));
 			

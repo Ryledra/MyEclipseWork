@@ -1,3 +1,4 @@
+package com.qa.BattleshipJUnit.BattleshipJUnit;
 
 public class Ship {
 	private int[] position = new int[2];
