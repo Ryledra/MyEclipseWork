@@ -13,7 +13,7 @@ public class Player {
 	
 	public boolean placeShips() {
 		
-		String[] ships = {"2,patrol1","2,patrol2"}; //{ship length, shipID}
+		String[] ships = {"2,patrol1","2,patrol2","3,battleship1","3,battleship2","3,submarine","4,destroyer","5,carrier"}; //{ship length, shipID}
 		String input = "";
 		
 		for (String i : ships)	{
@@ -40,22 +40,22 @@ public class Player {
 					else if(partsInput[1].equals("up")) pos[0] = ((((pos[0] - Integer.valueOf(partsInput[2])) % grid.gridSize) + grid.gridSize) % grid.gridSize);
 					else if(partsInput[1].equals("down")) pos[0] = (pos[0] + Integer.valueOf(partsInput[2])) % grid.gridSize;
 				}
-			} while (!partsInput[0].equals("set")); 
+			} while (!partsInput[0].equals("set"));
 			
 			this.ships.add(new Ship(pos, orientation, Integer.valueOf(parts[0]), parts[1])); 
 			for (int j = 0; j < Integer.valueOf(parts[0]); j++)	{
 				switch (orientation)	{
 				case 0: // down
-					grid.getSea()[pos[0]+j][pos[1]].setContainsShip(true);
+					grid.getSea()[((pos[0]+j)+grid.gridSize)%grid.gridSize][pos[1]].setContainsShip(true);
 					break;
 				case 1: // right
-					grid.getSea()[pos[0]][pos[1]+j].setContainsShip(true);
+					grid.getSea()[pos[0]][((pos[1]+j)+grid.gridSize)%grid.gridSize].setContainsShip(true);
 					break;
 				case 2: // up 
-					grid.getSea()[pos[0]-j][pos[1]].setContainsShip(true);
+					grid.getSea()[((pos[0]-j)+grid.gridSize)%grid.gridSize][pos[1]].setContainsShip(true);
 					break;
 				case 3: // left
-					grid.getSea()[pos[0]][pos[1]-j].setContainsShip(true);
+					grid.getSea()[pos[0]][((pos[1]-j)+grid.gridSize)%grid.gridSize].setContainsShip(true);
 					break;
 				}
 			}
