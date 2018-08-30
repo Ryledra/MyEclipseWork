@@ -17,6 +17,11 @@ public class Library {
 		previousItemID++;
 		return previousItemID;
 	}
+	
+	public boolean dropItem(int itemID)	{
+		if (itemList.remove(itemID) == null) return false;
+		else return true;
+	}
 
 	public HashMap<Integer, Item> getItemList() {
 		return itemList;

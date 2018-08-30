@@ -12,6 +12,14 @@ public abstract class Item {
 		this.title = title;
 	}
 	
+	public void setAuthors(ArrayList<String> authors) {
+		this.authors = authors;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	@Override
 	public String toString() {
 		return "Item [ authors=" + authors + ", title=" + title + "]";

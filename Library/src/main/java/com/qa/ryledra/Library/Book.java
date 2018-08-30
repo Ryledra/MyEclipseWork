@@ -11,6 +11,10 @@ public class Book extends Item	{
 		this.publisher = publisher;
 	}
 
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+
 	@Override
 	public String toString() {
 		return "Book [publisher=" + publisher + ", authors=" + authors + ", title=" + title + "]";

@@ -15,4 +15,8 @@ public class Journal extends Item {
 		return journalName;
 	}
 
+	public void setJournalName(String journalName) {
+		this.journalName = journalName;
+	}
+
 }

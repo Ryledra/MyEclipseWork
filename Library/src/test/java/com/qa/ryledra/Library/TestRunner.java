@@ -2,9 +2,9 @@ package com.qa.ryledra.Library;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
-import org.junit.Ignore;
+//import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestRunner {
@@ -25,7 +25,7 @@ public class TestRunner {
 		
 		Library lib = new Library();
 		
-		//book 
+		// book 
 		Item b1 = new ItemBuilder().addAuthor("Mitch Connor").setTitle("how to rule the world").setPublisher("Collins").itemBuilder(Library.itemTypes.book);
 		lib.getItemList().put(lib.getNewID(), b1);
 		// book assert
@@ -39,9 +39,15 @@ public class TestRunner {
 	}
 	
 	@Test
-	@Ignore
 	public void removeItem()	{
-		fail();
+		Library lib = new Library();
+		
+		// book 
+		Item b1 = new ItemBuilder().addAuthor("Mitch Connor").setTitle("how to rule the world").setPublisher("Collins").itemBuilder(Library.itemTypes.book);
+		lib.getItemList().put(lib.getNewID(), b1);
+		int itemID = lib.getPreviousItemID();
+		lib.dropItem(itemID);
+		assertNull(lib.getItemList().get(lib.getPreviousItemID()));
 	}
 	
 	@Test
