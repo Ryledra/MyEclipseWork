@@ -1,6 +1,6 @@
 package com.qa.ryledra.Library;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
 	
@@ -8,13 +8,17 @@ public class Library {
 		book, journal
 	}
 	
-	private ArrayList<Item> itemList = new ArrayList<>(); // use hashmap?
-	// private HashMap<Integer, Item> itemList = new HashMap<>();
+	//private ArrayList<Item> itemList = new ArrayList<>(); // use hashmap?
+	private HashMap<Integer, Item> itemList = new HashMap<>();
+	
 	private int previousItemID = 0;
 	
-	
+	public int getNewID()	{
+		previousItemID++;
+		return previousItemID;
+	}
 
-	public ArrayList<Item> getItemList() {
+	public HashMap<Integer, Item> getItemList() {
 		return itemList;
 	}
 

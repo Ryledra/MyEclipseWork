@@ -7,6 +7,10 @@ public abstract class Item {
 	protected ArrayList<String> authors = new ArrayList<>();
 	protected String title;
 	
+	public Item(ArrayList<String> authors, String title)	{
+		this.authors = authors;
+		this.title = title;
+	}
 	
 	@Override
 	public String toString() {

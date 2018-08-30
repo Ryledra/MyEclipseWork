@@ -5,16 +5,42 @@ import java.util.ArrayList;
 public class ItemBuilder {
 	private ArrayList<String> authors = new ArrayList<>();
 	private String title;
+	private String publisher;
+	private String journalName;
 	
 	public Item itemBuilder(Library.itemTypes type)	{
-		return new Book(this.authors, this.title);
+		switch (type)	{
+		case book:
+			return new Book(this.authors, this.title, this.publisher);
+		case journal:
+			return new Journal(this.authors, this.title, this.journalName);
+		default:
+			return null;
+		}
 	}
 
-	public void setTitle(String title) {
+	public ItemBuilder setTitle(String title) {
 		this.title = title;
+		return this;
 	}
 
-	public void setAuthors(ArrayList<String> authors) {
+	public ItemBuilder setAuthors(ArrayList<String> authors) {
 		this.authors = authors;
+		return this;
+	}
+	
+	public ItemBuilder setPublisher(String publisher)	{
+		this.publisher = publisher;
+		return this;
+	}
+	
+	public ItemBuilder setJournalName(String journalName)	{
+		this.journalName = journalName;
+		return this;
+	}
+	
+	public ItemBuilder addAuthor(String author)	{
+		this.authors.add(author);
+		return this;
 	}
 }
