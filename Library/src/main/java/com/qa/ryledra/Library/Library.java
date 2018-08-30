@@ -9,6 +9,7 @@ public class Library {
 	}
 	
 	private ArrayList<Item> itemList = new ArrayList<>(); // use hashmap?
+	// private HashMap<Integer, Item> itemList = new HashMap<>();
 	private int previousItemID = 0;
 	
 	
