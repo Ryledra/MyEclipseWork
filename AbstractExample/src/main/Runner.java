@@ -7,6 +7,7 @@ public class Runner {
 		doDrawing(c);
 		Line l = new Line();
 		doDrawing(l);
+		
 	}
 
 	public static void doDrawing(Draw x)	{
