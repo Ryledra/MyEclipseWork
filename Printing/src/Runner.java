@@ -8,8 +8,7 @@ public class Runner {
 		
 		try {
 			if (str.split(" ")[0].equals("hello")) {
-				QAEx qe = new QAEx();
-				throw qe;
+				throw new QAEx();
 			} else	{
 				print.printing1(str);
 				System.out.println("\n");
